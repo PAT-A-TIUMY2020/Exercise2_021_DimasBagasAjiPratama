@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="46baca03-1ad3-4778-80d1-cd087b374cf7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ServiceRest_021_Dimas_Bagas_AjiPratama/Service1/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d60701db-c306-4a65-9ed4-b1c13947d661" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceRest_021_Dimas_Bagas_AjiPratama/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="fb305182-ddb8-43aa-936b-36e67c4e5dc9" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceRest_021_Dimas_Bagas_AjiPratama/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="6821628d-1b68-41ab-af56-6b1203a108eb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceRest_021_Dimas_Bagas_AjiPratama/Service1/mex" />
+    <MetadataFile FileName="ServiceRest_021_Dimas_Bagas_AjiPratama.xsd" MetadataType="Schema" ID="8d936b60-faf2-4b6c-89bc-3f784a51b512" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceRest_021_Dimas_Bagas_AjiPratama/Service1/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
