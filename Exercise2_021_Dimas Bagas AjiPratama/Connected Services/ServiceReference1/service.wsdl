@@ -25,6 +25,12 @@
   <wsdl:message name="ITI_UMY_CreateMahasiswa_OutputMessage">
     <wsdl:part name="parameters" element="tns:CreateMahasiswaResponse" />
   </wsdl:message>
+  <wsdl:message name="ITI_UMY_UpdateMahasiswa_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMahasiswa" />
+  </wsdl:message>
+  <wsdl:message name="ITI_UMY_UpdateMahasiswa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMahasiswaResponse" />
+  </wsdl:message>
   <wsdl:portType name="ITI_UMY">
     <wsdl:operation name="GetAllMahasiswa">
       <wsdl:input wsaw:Action="http://tempuri.org/ITI_UMY/GetAllMahasiswa" message="tns:ITI_UMY_GetAllMahasiswa_InputMessage" />
@@ -37,6 +43,10 @@
     <wsdl:operation name="CreateMahasiswa">
       <wsdl:input wsaw:Action="http://tempuri.org/ITI_UMY/CreateMahasiswa" message="tns:ITI_UMY_CreateMahasiswa_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITI_UMY/CreateMahasiswaResponse" message="tns:ITI_UMY_CreateMahasiswa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMahasiswa">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITI_UMY/UpdateMahasiswa" message="tns:ITI_UMY_UpdateMahasiswa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITI_UMY/UpdateMahasiswaResponse" message="tns:ITI_UMY_UpdateMahasiswa_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITI_UMY" type="tns:ITI_UMY">
@@ -61,6 +71,15 @@
     </wsdl:operation>
     <wsdl:operation name="CreateMahasiswa">
       <soap:operation soapAction="http://tempuri.org/ITI_UMY/CreateMahasiswa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMahasiswa">
+      <soap:operation soapAction="http://tempuri.org/ITI_UMY/UpdateMahasiswa" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

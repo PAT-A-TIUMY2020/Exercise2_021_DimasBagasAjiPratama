@@ -32,6 +32,12 @@ namespace Exercise2_021_Dimas_Bagas_AjiPratama.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITI_UMY/CreateMahasiswa", ReplyAction="http://tempuri.org/ITI_UMY/CreateMahasiswaResponse")]
         System.Threading.Tasks.Task<string> CreateMahasiswaAsync(ServiceRest_021_Dimas_Bagas_AjiPratama.Mahasiswa mhs);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITI_UMY/UpdateMahasiswa", ReplyAction="http://tempuri.org/ITI_UMY/UpdateMahasiswaResponse")]
+        string UpdateMahasiswa(ServiceRest_021_Dimas_Bagas_AjiPratama.Mahasiswa mhs);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITI_UMY/UpdateMahasiswa", ReplyAction="http://tempuri.org/ITI_UMY/UpdateMahasiswaResponse")]
+        System.Threading.Tasks.Task<string> UpdateMahasiswaAsync(ServiceRest_021_Dimas_Bagas_AjiPratama.Mahasiswa mhs);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,6 +89,14 @@ namespace Exercise2_021_Dimas_Bagas_AjiPratama.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> CreateMahasiswaAsync(ServiceRest_021_Dimas_Bagas_AjiPratama.Mahasiswa mhs) {
             return base.Channel.CreateMahasiswaAsync(mhs);
+        }
+        
+        public string UpdateMahasiswa(ServiceRest_021_Dimas_Bagas_AjiPratama.Mahasiswa mhs) {
+            return base.Channel.UpdateMahasiswa(mhs);
+        }
+        
+        public System.Threading.Tasks.Task<string> UpdateMahasiswaAsync(ServiceRest_021_Dimas_Bagas_AjiPratama.Mahasiswa mhs) {
+            return base.Channel.UpdateMahasiswaAsync(mhs);
         }
     }
 }

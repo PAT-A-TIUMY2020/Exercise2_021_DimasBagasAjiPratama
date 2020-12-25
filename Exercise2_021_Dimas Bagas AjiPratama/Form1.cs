@@ -112,10 +112,31 @@ namespace Exercise2_021_Dimas_Bagas_AjiPratama
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
-   
+            var json = new WebClient().DownloadString("http://localhost:1907/Mahasiswa");
+            var data = JsonConvert.DeserializeObject<List<Mahasiswa>>(json);
+
+            string nim = txtnim.Text;
+            var item = data.Where(x => x.nim ==txtnim.Text).FirstOrDefault();
+            if (item != null)
+            {
+                // update logger with your textboxes data
+                item.nama = txtnama.Text;
+                item.nim = txtnim.Text;
+                item.prodi = txtprodi.Text;
+                item.angkatan = txtangkatan.Text;
+
+                // Save everything
+                string output = JsonConvert.SerializeObject(item, Formatting.Indented);
+                var postdata = new WebClient();
+                postdata.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+                string response = postdata.UploadString(baseurl + "UpdateMahasiswa", output);
+                Console.WriteLine(response);
+                TampilData();
+
+            }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+            private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtnama.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
             txtnim.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
