@@ -201,6 +201,7 @@
             this.btclear.TabIndex = 16;
             this.btclear.Text = "Clear";
             this.btclear.UseVisualStyleBackColor = true;
+            this.btclear.Click += new System.EventHandler(this.btclear_Click);
             // 
             // Form1
             // 

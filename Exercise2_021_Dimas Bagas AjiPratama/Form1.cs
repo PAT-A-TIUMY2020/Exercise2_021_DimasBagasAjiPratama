@@ -156,5 +156,13 @@ namespace Exercise2_021_Dimas_Bagas_AjiPratama
         {
 
         }
+
+        private void btclear_Click(object sender, EventArgs e)
+        {
+            txtnim.Clear();
+            txtnama.Clear();
+            txtangkatan.Clear();
+            txtprodi.Clear();
+        }
     }
 }
