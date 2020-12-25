@@ -119,13 +119,13 @@ namespace Exercise2_021_Dimas_Bagas_AjiPratama
             var item = data.Where(x => x.nim ==txtnim.Text).FirstOrDefault();
             if (item != null)
             {
-                // update logger with your textboxes data
+               
                 item.nama = txtnama.Text;
                 item.nim = txtnim.Text;
                 item.prodi = txtprodi.Text;
                 item.angkatan = txtangkatan.Text;
 
-                // Save everything
+                
                 string output = JsonConvert.SerializeObject(item, Formatting.Indented);
                 var postdata = new WebClient();
                 postdata.Headers.Add(HttpRequestHeader.ContentType, "application/json");
@@ -154,6 +154,27 @@ namespace Exercise2_021_Dimas_Bagas_AjiPratama
 
         private void btndelete_Click(object sender, EventArgs e)
         {
+            var json = new WebClient().DownloadString("http://localhost:1907/Mahasiswa");
+            var data = JsonConvert.DeserializeObject<List<Mahasiswa>>(json);
+
+            if (MessageBox.Show("Are you sure you want to delete", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                string nim = txtnim.Text;
+                var item = data.Where(x => x.nim == txtnim.Text).FirstOrDefault();
+                if (item != null)
+                {
+                    data.Remove(item);
+                    
+                    string output = JsonConvert.SerializeObject(item, Formatting.Indented);
+                    var postdata = new WebClient();
+                    postdata.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+                    string response = postdata.UploadString(baseurl + "DeleteMahasiswa/{nim}", output);
+                    Console.WriteLine(response);
+                    TampilData();
+                }
+
+            }
 
         }
 
