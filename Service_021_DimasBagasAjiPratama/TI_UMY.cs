@@ -127,5 +127,34 @@ namespace Service_021_DimasBagasAjiPratama
 
             return msg;
         }
+
+        public string DeleteMahasiswa(string nim)
+        {
+            string msg = "GAGAL";
+            SqlConnection connection = new SqlConnection(dbstring);
+            string query = string.Format("DELETE from dbo.Mahasiswa where NIM = '{0}'", nim);
+            SqlCommand cmd = new SqlCommand(query, connection);
+            int result = 0;
+
+            try
+            {
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                msg = "SUKSES";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(query);
+                msg = "GAGAL";
+            }
+
+            if (result != 0)
+            {
+                msg = "Sukses";
+            }
+            return msg;
+        }
     }
 }

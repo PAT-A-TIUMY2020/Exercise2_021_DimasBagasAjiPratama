@@ -30,6 +30,10 @@ namespace Service_021_DimasBagasAjiPratama
         [WebInvoke(Method = "POST", UriTemplate = "UpdateMahasiswa", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         string UpdateMahasiswa(Mahasiswa mhs);
 
+        [OperationContract]
+        [WebInvoke(Method = "DELETE", UriTemplate = "DeleteMahasiswa/{nim}", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        string DeleteMahasiswa(string nim);
+
     }
 
     [DataContract]
