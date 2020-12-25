@@ -44,6 +44,7 @@
             this.txtprodi = new System.Windows.Forms.TextBox();
             this.txtangkatan = new System.Windows.Forms.TextBox();
             this.lbljumlahdata = new System.Windows.Forms.Label();
+            this.btclear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -192,12 +193,22 @@
             this.lbljumlahdata.Size = new System.Drawing.Size(0, 17);
             this.lbljumlahdata.TabIndex = 15;
             // 
+            // btclear
+            // 
+            this.btclear.Location = new System.Drawing.Point(567, 222);
+            this.btclear.Name = "btclear";
+            this.btclear.Size = new System.Drawing.Size(75, 23);
+            this.btclear.TabIndex = 16;
+            this.btclear.Text = "Clear";
+            this.btclear.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btclear);
             this.Controls.Add(this.lbljumlahdata);
             this.Controls.Add(this.txtangkatan);
             this.Controls.Add(this.txtprodi);
@@ -241,6 +252,7 @@
         private System.Windows.Forms.TextBox txtprodi;
         private System.Windows.Forms.TextBox txtangkatan;
         private System.Windows.Forms.Label lbljumlahdata;
+        private System.Windows.Forms.Button btclear;
     }
 }
 
